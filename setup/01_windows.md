@@ -73,6 +73,7 @@ echo %JAVA_HOME%
 
 1. Visit [Adoptium website](https://adoptium.net/)
 2. Select:
+
    - Operating System: Windows
    - Architecture: x64
    - Package Type: JDK
@@ -197,6 +198,7 @@ sdk install java 17.0.9-tem
 ### Method 1: Using System Properties GUI
 
 1. **Open System Properties**:
+
    - Right-click "This PC" → Properties → Advanced system settings
    - Or press `Win + X` → System → Advanced system settings
    - Or run `sysdm.cpl` → Advanced tab
@@ -204,6 +206,7 @@ sdk install java 17.0.9-tem
 2. **Click "Environment Variables"**
 
 3. **Set JAVA_HOME**:
+
    - Click "New" under System variables
    - Variable name: `JAVA_HOME`
    - Variable value: `C:\Program Files\Java\jdk-17` (your Java installation path)
@@ -277,6 +280,7 @@ jenv use 17
 Create switching scripts in a folder (e.g., `C:\JavaSwitcher\`):
 
 **switch-java-11.bat:**
+
 ```batch
 @echo off
 set JAVA_HOME=C:\Program Files\Java\jdk-11
@@ -286,6 +290,7 @@ java -version
 ```
 
 **switch-java-17.bat:**
+
 ```batch
 @echo off
 set JAVA_HOME=C:\Program Files\Java\jdk-17
@@ -351,6 +356,7 @@ java Test
 ```
 
 Expected output:
+
 ```
 openjdk version "17.0.9" 2023-10-17
 OpenJDK Runtime Environment Temurin-17.0.9+9 (build 17.0.9+9)
@@ -445,19 +451,19 @@ For better development experience, configure Windows Terminal:
 
 ```json
 {
-    "profiles": {
-        "list": [
-            {
-                "name": "Java Development",
-                "commandline": "cmd.exe",
-                "startingDirectory": "C:\\JavaProjects",
-                "icon": "https://raw.githubusercontent.com/github/explore/5b3600551e122a3277c2c5368af2ad5725ffa9a1/topics/java/java.png",
-                "environmentVariables": {
-                    "JAVA_HOME": "C:\\Program Files\\Java\\jdk-17"
-                }
-            }
-        ]
-    }
+  "profiles": {
+    "list": [
+      {
+        "name": "Java Development",
+        "commandline": "cmd.exe",
+        "startingDirectory": "C:\\JavaProjects",
+        "icon": "https://raw.githubusercontent.com/github/explore/5b3600551e122a3277c2c5368af2ad5725ffa9a1/topics/java/java.png",
+        "environmentVariables": {
+          "JAVA_HOME": "C:\\Program Files\\Java\\jdk-17"
+        }
+      }
+    ]
+  }
 }
 ```
 
@@ -664,6 +670,7 @@ java -version
 ```
 
 Usage:
+
 ```powershell
 # Run with defaults (Temurin 17)
 .\Install-Java.ps1
@@ -703,4 +710,4 @@ You now have Java successfully installed on your Windows system! Whether you're 
 
 ---
 
-*Remember to restart your Command Prompt or PowerShell after installation to ensure all environment variables are loaded correctly!*
+_Remember to restart your Command Prompt or PowerShell after installation to ensure all environment variables are loaded correctly!_
